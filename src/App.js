@@ -1,26 +1,28 @@
 import React from 'react';
 import Pics from "./pics.json";
-import Wrapper from "./components/wrapper";
-import Title from "./components/Title"
-import Cards from "./components/cards"
+import Navbar from "./components/Navbar";
+import Cards from "./components/Cards";
 
-function App() {
-  return (
-    <Wrapper>
-      <Title>
+class App extends Component {
+  state = {
+    Pics,
+    count: 0
+  };
 
-      </Title>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Clicky Game</h1>
-          <p class="lead">Click on an image to earn points, but don't click on any more than once!</p>
+  render() {
+    return (
+      <div>
+        <Navbar />
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h1 className="display-4">Clicky Game</h1>
+            <p className="lead">Click on an image to earn points, but don't click on any more than once!</p>
+          </div>
         </div>
+        <Cards />
       </div>
-      <Cards>
-
-      </Cards>
-    </Wrapper>
-  );
+    )
+  }
 }
 
 export default App;
