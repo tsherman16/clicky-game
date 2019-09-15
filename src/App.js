@@ -79,15 +79,15 @@ class App extends Component {
             <p className="lead">Click on an image to earn points, but don't click on any more than once!</p>
           </div>
         </div>
-        {this.state.pics.map(pic => (
-          <Cards
-            handleCardCount={this.handleCardCount}
-            id={pic.id}
-            key={pic.id}
-            image={pic.picture}
-            clicked={pic.clicked}
-          />
-        ))}
+          {this.state.pics.map(pic => (
+            <Cards
+              handleCardCount={this.handleCardCount}
+              id={pic.id}
+              key={pic.id}
+              image={pic.picture}
+              clicked={pic.clicked}
+            />
+          ))}
       </div>
     )
   }
