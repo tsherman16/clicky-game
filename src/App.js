@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import pics from "./pics.json";
 import Navbar from "./components/navbar/Navbar";
 import Cards from "./components/cards/Cards";
+import "./app.css";
 
 class App extends Component {
   state = {
@@ -40,6 +41,7 @@ class App extends Component {
 
         } else {
           console.log("Failed");
+          alert("Streak over back at 0!");
           this.resetState();
         }
       }
